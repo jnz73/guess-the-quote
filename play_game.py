@@ -2,14 +2,14 @@ from random import choice
 
 
 def play(quote_list):
-    guesses = 3
+    guesses = 4
     found = False
     selected_quote = choice(quote_list)
     print("Here is a Quote:")
     print("\n")
     print(selected_quote.quote)
     print("\n")
-    while guesses >= 0 and not found:
+    while guesses > 0 and not found:
         print_hint(guesses, selected_quote)
         answer = input(
             f"Who said this? ({guesses} guesses remaining): ")
