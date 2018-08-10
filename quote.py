@@ -9,7 +9,7 @@ class Quote:
         self.bio = bio
 
     def __repr__(self):
-        return self.quote + " by " + self.author
+        return self.quote
 
     def get_initials(self):
         names = split(r"\W+", self.author)

@@ -7,7 +7,7 @@ def play(quote_list):
     selected_quote = choice(quote_list)
     print("Here is a Quote:")
     print("\n")
-    print(selected_quote.quote)
+    print(selected_quote)
     print("\n")
     while guesses > 0 and not found:
         print_hint(guesses, selected_quote)
