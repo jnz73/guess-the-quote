@@ -23,10 +23,10 @@ def play(quote_list):
         print(f"The author was: {selected_quote.author}! Better luck next time!")
 
 def print_hint(guesses, selected_quote):
-    prefix = "Here's a hint: The author "
+    prefix = "Here's a hint: The author"
     if guesses == 3:
-        print(prefix + f"was born in {selected_quote.birth}")
+        print(prefix + f" was born in {selected_quote.birth}")
     if guesses == 2:
-        print(prefix + f"initials are {selected_quote.get_initials()}")
+        print(prefix + f"'s initials are {selected_quote.get_initials()}")
     if guesses == 1:
-        print(prefix + f"bio is:\n\n{selected_quote.bio_without_author_name()}")
+        print(prefix + f"'s bio is:\n\n{selected_quote.bio_without_author_name()}")
