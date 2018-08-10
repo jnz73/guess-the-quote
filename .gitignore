@@ -1,6 +1,11 @@
 # Created by https://www.gitignore.io/api/python
 
 ### Python ###
+# project specific:
+
+quotes.pickle
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
