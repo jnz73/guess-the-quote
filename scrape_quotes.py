@@ -9,6 +9,7 @@ def get_quotes_list():
     all_quotes = []
     while True:
         url = base_url + f"/page/{page}"
+        print("Scraping " + url + "...")
         response = requests.get(url)
         soup = BeautifulSoup(response.text, "html.parser")
         quotes = soup.select(".text")
