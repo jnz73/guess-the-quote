@@ -3,6 +3,7 @@ from os.path import exists
 from pathlib import Path
 import pickle
 
+
 def get_quotes():
     file_is_valid = False
     quote_list = []

@@ -20,7 +20,9 @@ def play(quote_list):
             print("Sorry wrong answer!")
             guesses -= 1
     if not found:
-        print(f"The author was: {selected_quote.author}! Better luck next time!")
+        print(
+            f"The author was: {selected_quote.author}! Better luck next time!")
+
 
 def print_hint(guesses, selected_quote):
     prefix = "Here's a hint: The author"
@@ -29,4 +31,5 @@ def print_hint(guesses, selected_quote):
     elif guesses == 2:
         print(prefix + f"'s initials are {selected_quote.get_initials()}")
     elif guesses == 1:
-        print(prefix + f"'s bio is:\n\n{selected_quote.bio_without_author_name()}")
+        print(
+            prefix + f"'s bio is:\n\n{selected_quote.bio_without_author_name()}")
