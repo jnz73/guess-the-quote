@@ -15,7 +15,8 @@ class Quote:
         names = split(r"\W+", self.author)
         initials = ""
         for name in names:
-            initials += name[0]
+            if name:
+                initials += name[0]
         return initials
 
     def bio_without_author_name(self):
