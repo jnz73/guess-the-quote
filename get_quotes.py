@@ -1,4 +1,4 @@
-from scrape_quotes import get_quotes_list
+from scrape_quotes import scrape_quotes_list
 from os.path import exists
 from pathlib import Path
 import pickle
@@ -20,7 +20,7 @@ def get_quotes():
         print("no quotes file found")
     if not file_is_valid:
         print("webscraping quotes...")  # http://quotes.toscrape.com/
-        quote_list = get_quotes_list()
+        quote_list = scrape_quotes_list()
         with open(file, "wb") as file:
             pickle.dump(quote_list, file)
     return quote_list

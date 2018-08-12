@@ -3,13 +3,13 @@ from quote import Quote
 from bs4 import BeautifulSoup
 
 
-def get_quotes_list():
+def scrape_quotes_list():
     page = 1
     BASE_URL = "http://quotes.toscrape.com"
     all_quotes = []
     while True:
         url = BASE_URL + f"/page/{page}"
-        print("Scraping " + url + "...")
+        print("Scraping page " + page + "...")
         response = requests.get(url)
         soup = BeautifulSoup(response.text, "html.parser")
         quotes = soup.select(".text")
