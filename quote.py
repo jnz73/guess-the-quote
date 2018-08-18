@@ -22,5 +22,5 @@ class Quote:
     def bio_without_author_name(self):
         new_bio = self.bio
         for name in self.author.split(" "):
-            new_bio = new_bio.replace(name, "*")
+            new_bio = new_bio.replace(name, "*"*len(name))
         return new_bio
